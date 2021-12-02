@@ -1,0 +1,10 @@
+import { Cursus } from './cursus';
+
+export const LCursus: Cursus[] = [
+  { id: 1, nom: 'Front',description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image:"https://2csolution.com/wp-content/uploads/2019/12/htmlcss-1024x533.png",motsCles:"front, DESIGN PATTERN, BONNES PRATIQUES DE DÉVELOPPEMENT" },
+  { id: 2, nom: 'Angular',description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image:"https://th.bing.com/th/id/OIP.DfuQqiF3K1QkHVTYHBe40QHaD5?pid=ImgDet&rs=1",motsCles:"angular" },
+  { id: 3, nom: 'Bootstrap',description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image:"https://th.bing.com/th/id/R.e928b89818d1e81d13e01b2bded2b650?rik=SSVyZSfq0fEQbg&pid=ImgRaw&r=0&sres=1&sresct=1",motsCles:"bootstrap" },
+  { id: 4, nom: 'Symfony',description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image:"https://th.bing.com/th/id/OIP.6FhXQeJosaim4YYeHi_ZngHaEc?pid=ImgDet&rs=1",motsCles:"symfony" },
+  { id: 5, nom: 'php',description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", image:"./assets/Images/R.png",motsCles:"php" },
+
+];

@@ -1,0 +1,68 @@
+<p>liste-cursus</p>
+
+  <div class="container"><div class="row"><div class="col-sm">
+    <div  class="cur" *ngFor="let a of lcursus | order:['nom']" style="margin-bottom: 30px; border:solid; padding: 10px 10px 10px 10px; width: 230px">
+        Nom: {{a.nom | uppercase }}
+     <img src="{{a.image}}" style="width: 100px; " (click)="onSelect(a)">
+    </div>
+  </div><div class="col-sm">
+ 
+  </div><div class="col-sm">
+    <div *ngIf="selectedCursus" style="border:solid; width: 300px; height:500px; margin-top: 0px; ">
+
+        <h2>{{selectedCursus.nom | uppercase}} Details</h2>
+        <div><img src="{{selectedCursus.image}}" style="width: 100px; "/></div>
+        <div><span>Description: </span>{{selectedCursus.description}}</div>
+        <br>
+        <div><span>Mots-clés: </span>{{selectedCursus.motsCles}}</div>
+        <br>
+        
+      </div>
+  </div></div></div>
+
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="container">
+    <div >
+      <label for="nom">
+        Nom du cursus
+      </label>
+     <input id="nom" type="text" formControlName="nom" class="form-control" style="width: 300px;" >
+      <div *ngIf="checkoutForm.get('nom').touched && checkoutForm.get('nom').invalid" class="alert alert-danger">
+        <div *ngIf="checkoutForm.get('nom').errors?.required">name is required.</div>
+    </div>
+    </div>
+  
+   
+  
+    <div>
+      <label for="description">
+       Description
+      </label>
+      <input id="description" type="text" formControlName="description" class="form-control" style="width: 300px;">
+      <div *ngIf="checkoutForm.get('nom').touched && checkoutForm.get('nom').invalid" class="alert alert-danger">
+        <div *ngIf="checkoutForm.get('nom').errors?.required"> description is required.</div>
+    </div>
+    </div>
+
+    <div>
+        <label for="image">
+         Image
+        </label>
+        <input id="image" type="text" formControlName="image" class="form-control" style="width: 300px;">
+        <div *ngIf="checkoutForm.get('image').touched && checkoutForm.get('image').invalid" class="alert alert-danger">
+          <div *ngIf="checkoutForm.get('image').errors?.required">image is required.</div>
+          <div *ngIf="checkoutForm.get('image').errors?.pattern">url not valid.</div>
+      </div>
+</div>
+      <div>
+        <label for="motsCles">
+         Mots-clés
+        </label>
+        <input id="motsCles" type="text" formControlName="motsCles" class="form-control" style="width: 300px;">
+        <div *ngIf="checkoutForm.get('motsCles').touched && checkoutForm.get('motsCles').invalid" class="alert alert-danger">
+          <div *ngIf="checkoutForm.get('motsCles').errors?.required">motsCles is required.</div>
+          <div *ngIf="checkoutForm.get('motsCles').errors?.pattern">minimum 2 mots</div>
+      </div>
+      </div>
+    <button class="btn btn-success" style="margin-top: 6px;" type="submit">Ajouter</button >
+  
+  </form>
